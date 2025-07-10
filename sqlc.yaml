@@ -1,0 +1,17 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    queries: "./DB/query"
+    schema: "./DB/migrations"
+    gen:
+      go:
+        package: "db"
+        out: "./DB/sqlc"
+        sql_package: "database/sql"
+        emit_json_tags: true
+        emit_prepared_queries: false
+        emit_interface: false
+        emit_exact_table_names: false
+        overrides:
+          - db_type: "timestamptz"
+            go_type: "time.Time" 
