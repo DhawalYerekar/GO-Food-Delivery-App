@@ -26,3 +26,10 @@ func (server *Server) setupRouter() {
 	server.router = router
 
 }
+
+// Start runs the http server
+
+func (s *Server) Start(address string) error {
+	return s.router.Run(address)
+
+}

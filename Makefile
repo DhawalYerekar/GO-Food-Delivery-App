@@ -7,5 +7,7 @@ migratedown:
 sqlc:
 	sqlc generate
 
+run:
+	go run main.go
 
-.PHONY: migrateup migratedown sqlc
+.PHONY: migrateup migratedown sqlc run
