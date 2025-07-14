@@ -21,7 +21,7 @@ jobs:
         image: postgres:latest
         
         env:
-          POSTGRES_USER: myfoodsapp"
+          POSTGRES_USER: myfoodsapp
           POSTGRES_PASSWORD: mysecretpassword
           POSTGRES_DB: foodsapp
 
